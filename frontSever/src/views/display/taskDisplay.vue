@@ -48,7 +48,7 @@
               rows="3"
               :readonly="true"
             />
-            <van-field label="💰积分价格" v-model="credit" :readonly="true" />
+            <van-field label="💰pp币价格" v-model="credit" :readonly="true" />
             <van-field
               label="🦄创建对象"
               v-model="founderName"

@@ -38,16 +38,16 @@ create table IF NOT EXISTS usertable
     password     varchar(20) default '123456'                   null comment '用户密码',
     userText     text                                           null comment '用户的介绍',
     userImage    text                                           null,
-    credit       int         default 0                          not null comment '积分',
+    credit       int         default 0                          not null comment 'pp币',
     updateTime   datetime                                       null comment '更新时间',
     remindText   text                                           null comment '用户提醒文案',
     remindSwitch tinyint     default 0                          null comment '提醒开关',
     remindTime   varchar(20) default '0 30 11 * * ?'            null comment '提醒时间',
     registerTime datetime                                       null comment '注册时间',
     displayItem  varchar(10) default '♥在一起'                     null comment '展示事件',
-    displayDay   varchar(20) default '2022-10-06'               not null comment '展示事件时间',
-    displayLogo  varchar(20) default '?捏捏的魔仙堡'                  not null comment '展示logo',
-    displayUrl   varchar(50) default 'http://121.37.243.173/#/' not null comment '展示二维码内容',
+    displayDay   varchar(20) default '2024-04-05'               not null comment '展示事件时间',
+    displayLogo  varchar(20) default '?潘潘大王的地盘！'                  not null comment '展示logo',
+    displayUrl   varchar(50) default 'http://121.41.123.214/#/' not null comment '展示二维码内容',
     constraint usertable_nameId_uindex
         unique (nameId),
     constraint usertable_name_uindex
@@ -59,8 +59,8 @@ create table IF NOT EXISTS detailusertable
     userId          int auto_increment comment '用户ID'
         primary key,
     useName         varchar(10)   not null comment '用户名',
-    allCredit       int default 0 null comment '用户获得积分总数',
-    dayCredit       int default 0 null comment '用户今日获得积分',
+    allCredit       int default 0 null comment '用户获得pp币总数',
+    dayCredit       int default 0 null comment '用户今日获得pp币',
     allCompleteTask int default 0 null comment '用户完成任务总数',
     dayCompleteTask int default 0 null comment '用户每日完成任务数',
     allAddTask      int default 0 null comment '添加任务总数',
@@ -87,7 +87,7 @@ create table IF NOT EXISTS producetable
     founderId     int                  not null comment '商品创始人',
     produceText   varchar(100)         null comment '商品简介',
     produceImage  text                 null comment '商品图片地址',
-    produceCredit int                  null comment '单个任务积分',
+    produceCredit int                  null comment '单个任务pp币',
     produceNum    tinyint    default 1 null comment '商品数量,默认为1',
     customer      varchar(20)          not null comment '出售商品人名字',
     updateTime    datetime             null comment '更新商品时间',
@@ -131,7 +131,7 @@ create table IF NOT EXISTS tasktable
     useName      varchar(20)          not null comment '发起任务的人',
     taskName     varchar(100)         not null comment '任务名称',
     taskText     varchar(200)         null comment '任务备注',
-    taskCredit   int        default 0 null comment '任务积分',
+    taskCredit   int        default 0 null comment '任务pp币',
     updateTime   datetime             null comment '任务更新时间',
     registerTime datetime             null comment '任务创建时间',
     checkTask    tinyint(1) default 0 null comment '任务是否完成',
@@ -149,7 +149,7 @@ create table IF NOT EXISTS temtasktable
     useName      varchar(20)          not null comment '发起任务的人',
     taskName     varchar(100)         not null comment '任务名称',
     taskText     varchar(200)         null comment '任务备注',
-    taskCredit   int        default 0 null comment '任务积分',
+    taskCredit   int        default 0 null comment '任务pp币',
     updateTime   datetime             null comment '任务更新时间',
     registerTime datetime             null comment '任务创建时间',
     checkTask    tinyint(1) default 0 null comment '任务是否完成',
@@ -159,7 +159,7 @@ create table IF NOT EXISTS temtasktable
             on update cascade on delete cascade
 );
 
-INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('loginCheck', '小羊是帅哥');
-INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('wechatNoticeKey', 'ff0a6573-0b5e-432c-b22a-0kjhk399a1275');
+INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('loginCheck', '27');
+INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('wechatNoticeKey', '8e5e5512-3b4e-477f-9328-a5575c77c9c9');
 
 

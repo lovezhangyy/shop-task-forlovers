@@ -46,7 +46,7 @@ create table IF NOT EXISTS usertable
     registerTime datetime                                       null comment '注册时间',
     displayItem  varchar(10) default '♥在一起'                     null comment '展示事件',
     displayDay   varchar(20) default '2022-10-06'               not null comment '展示事件时间',
-    displayLogo  varchar(20) default '?捏捏的魔仙堡'                  not null comment '展示logo',
+    displayLogo  varchar(20) default '潘潘大王的地盘！'                  not null comment '展示logo',
     displayUrl   varchar(50) default 'http://121.37.243.173/#/' not null comment '展示二维码内容',
     constraint usertable_nameId_uindex
     unique (nameId),
@@ -159,5 +159,5 @@ create table IF NOT EXISTS temtasktable
     on update cascade on delete cascade
     );
 
-INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('loginCheck', '小羊是帅哥');
+INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('loginCheck', '27');
 INSERT IGNORE INTO webserver.logincheck (attribute, value) VALUES ('wechatNoticeKey', 'ff0a6573-0b5e-432c-b22a-0kjhk399a1275');

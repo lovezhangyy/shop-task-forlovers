@@ -37,7 +37,7 @@
             rows="3"
             :readonly="true"
           />
-          <van-field label="💰积分总数" v-model="credit" :readonly="true" />
+          <van-field label="💰pp币总数" v-model="credit" :readonly="true" />
           <van-field label="⏱更新时间" v-model="updateTime" :readonly="true" />
           <van-field
             label="📅注册时间"

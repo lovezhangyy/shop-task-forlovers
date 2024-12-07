@@ -303,14 +303,14 @@
       <van-dialog
         v-model:show="show_4"
         title="🥰 温馨提示"
-        message="😂您不能删除别人创建的任务哦，快去完成自己的任务吧！"
+        message="😂可不能你的宝宝创建的任务哦，快去完成自己的任务吧！"
       >
       </van-dialog>
 
       <van-dialog
         v-model:show="show_5"
         title="🥰 温馨提示"
-        message="😂您不能完成别人创建的任务哦，快去完成自己的任务吧！"
+        message="😂可不能你的宝宝创建的任务哦，快去完成自己的任务吧！"
       >
       </van-dialog>
       <!-- 其他内容 -->
@@ -573,7 +573,7 @@ export default {
           const newItem = {
             // 转移图像
             userImage: deletedItem.userImage,
-            // 转移积分
+            // 转移pp币
             taskCredit: deletedItem.taskCredit,
             // 转移任务文案
             taskText: deletedItem.taskText,

@@ -48,7 +48,7 @@
             rows="2"
             :readonly="true"
             />
-            <van-field label="💰积分价格" v-model="credit" :readonly="true" />
+            <van-field label="💰pp币价格" v-model="credit" :readonly="true" />
             <van-field label="🦄创建对象" v-model="founderName" :readonly="true" />
             <van-field label="🤖任务对象" v-model="useName" :readonly="true" />
             <van-field label="🎁完成情况" v-model="checkTask" :readonly="true" />

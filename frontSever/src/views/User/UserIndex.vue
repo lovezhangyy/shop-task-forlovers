@@ -33,7 +33,7 @@
                     <div style="transform: translateY(2.5vw)">
                       <h10>🧸欢迎！{{ name }}宝贝</h10>
                       <div style="transform: translateY(2.5vw)">
-                        <h10>💰积分：{{ credit }}</h10>
+                        <h10>💰pp币：{{ credit }}</h10>
                         <div style="transform: translateY(2.5vw)">
                           <h10><van-text-ellipsis :content="desc" /></h10>
                         </div>
@@ -74,7 +74,7 @@
                 to="/Produce"
               />
               <van-grid-item icon="cart-o" text="商品订单" replace to="/Room" />
-              <van-grid-item icon="wap-home-o" text="积分榜" replace to="/" />
+              <van-grid-item icon="wap-home-o" text="pp币榜" replace to="/" />
               <van-grid-item
                 icon="setting-o"
                 @click="requireItem()"

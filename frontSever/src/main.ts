@@ -43,7 +43,7 @@ import store from './store'
 const app = createApp(App).use(store);
 app.use(AddressEdit);
 //滑动单元格
-//积分和代办栏
+//pp币和代办栏
 app.use(ContactList);
 // 主题栏
 app.use(NavBar);
@@ -108,7 +108,7 @@ app.use(ActionSheet);
 app.use(Empty);
 
 // 注册密钥
-const loginLock = ref('小羊是帅哥');
+const loginLock = ref('27');
 
 app.provide('loginLock', loginLock);
 
@@ -118,12 +118,12 @@ const displayItem = ref('❤在一起');
 app.provide('displayItem', displayItem);
 
 // 海报距离日期
-const displayDay = ref('2022-10-06');
+const displayDay = ref('2024-04-05');
 
 app.provide('displayDay', displayDay);
 
 // 海报右下角名字
-const displayLogo = ref('🏰捏捏的魔仙堡');
+const displayLogo = ref('潘潘大王的地盘！');
 
 app.provide('displayLogo', displayLogo);
 

@@ -48,7 +48,7 @@
             rows="3"
             :readonly="true"
           />
-          <van-field label="💰积分价格" v-model="credit" :readonly="true" />
+          <van-field label="💰pp币价格" v-model="credit" :readonly="true" />
           <van-field label="🧩商品数量" v-model="num" :readonly="true" />
           <van-field
             label="🦄创建对象"
@@ -121,7 +121,7 @@
       <van-dialog
         v-model:show="show_3"
         title="购买商品失败"
-        message="😭您的积分不够，快去完成任务获取积分吧啊💪"
+        message="😭您的pp币不够，快去完成任务获取pp币吧啊💪"
         show-cancel-button
       >
       </van-dialog>

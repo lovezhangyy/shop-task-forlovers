@@ -18,7 +18,7 @@
   <div style="z-index: 1; height: 100vh">
     <van-floating-panel v-model:height="height" :anchors="anchors">
       <div
-        style="
+          style="
           display: flex;
           justify-content: center;
           transform: translateY(-26.5px);
@@ -30,7 +30,7 @@
       </div>
 
       <div
-        style="
+          style="
           display: flex;
           justify-content: center;
           align-items: center;
@@ -39,64 +39,64 @@
         "
       >
         <van-image
-          width="83%"
-          height="5%"
-          fit="contain"
-          position="center"
-          :src="image"
+            width="83%"
+            height="5%"
+            fit="contain"
+            position="center"
+            :src="image"
         />
       </div>
       <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
       />
       <div style="text-align: center; width: 80vw; padding: 10vw">
         <div
-          style="
+            style="
           display: flex;
           justify-content: center;
           align-items: center;
           transform: translateY(-2vh);
-          width:80vw
+          width:80vw;
           overflow: hidden;
         "
         >
           <van-form @submit="onSubmit">
             <van-field
-              v-model="username"
-              name="用户名"
-              label="🦄用户名"
-              placeholder="用户名"
-              :rules="[{ required: true, message: '请填写用户名' }]"
+                v-model="username"
+                name="用户名"
+                label="🦄用户名"
+                placeholder="用户名"
+                :rules="[{ required: true, message: '请填写用户名' }]"
             />
             <van-field
-              v-model="password"
-              type="password"
-              name="密码"
-              label="🔑密码"
-              placeholder="密码"
-              :rules="[{ required: true, message: '请填写密码' }]"
+                v-model="password"
+                type="password"
+                name="密码"
+                label="🔑密码"
+                placeholder="密码"
+                :rules="[{ required: true, message: '请填写密码' }]"
             />
             <div style="margin-top: 2.5vw; overflow: hidden">
               <van-checkbox
-                class="remember"
-                v-model="checked"
-                checked-color="#F19290"
-                icon-size="3.5vw"
+                  class="remember"
+                  v-model="checked"
+                  checked-color="#F19290"
+                  icon-size="3.5vw"
               >
                 <h9
-                  style="
+                    style="
                     font-size: 3.5vw;
                     color: #f19290;
                     transform: translate(17px, 0px);
                   "
-                  >记住密码</h9
+                >记住密码</h9
                 ></van-checkbox
               >
             </div>
 
             <div
-              style="
+                style="
                 margin: 2.5vw;
                 overflow: hidden;
                 transform: translateY(1vw);
@@ -110,7 +110,7 @@
               <h5>
                 Don't have an account?
                 <router-link replace to="/userAdd" class="custom-link"
-                  >Sign up</router-link
+                >Sign up</router-link
                 >
               </h5>
             </div>
@@ -122,22 +122,22 @@
   <van-dialog v-model:show="show" title="😭提示" message="账号或密码错误">
   </van-dialog>
   <van-dialog
-    v-model:show="show_1"
-    title="🥰恭喜"
-    message="登录成功！"
-    width="70vw"
-    height="30vw"
-    :show-cancel-button="false"
-    :show-confirm-button="false"
+      v-model:show="show_1"
+      title="🥰恭喜"
+      message="登录成功！"
+      width="70vw"
+      height="30vw"
+      :show-cancel-button="false"
+      :show-confirm-button="false"
   >
   </van-dialog>
   <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Young+Serif"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Young+Serif"
   />
 </template>
-  
-  <script>
+
+<script>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import png from "@/util/love.gif";
@@ -212,26 +212,26 @@ export default {
         },
         body: JSON.stringify(user),
       })
-        .then((response) => response.json()) // 将 .json() 放在正确的位置
-        .then((data) => {
-          if (data.code == 1) {
-            console.log("登录成功", data.data);
-            show_1.value = true;
-            setTimeout(() => {
-              router.replace("/");
-            }, 1000);
-            const token = data.data;
+          .then((response) => response.json()) // 将 .json() 放在正确的位置
+          .then((data) => {
+            if (data.code == 1) {
+              console.log("登录成功", data.data);
+              show_1.value = true;
+              setTimeout(() => {
+                router.replace("/");
+              }, 1000);
+              const token = data.data;
 
-            localStorage.setItem("jwtToken", token);
-          } else {
+              localStorage.setItem("jwtToken", token);
+            } else {
+              show.value = true;
+              console.error("登录失败");
+            }
+          })
+          .catch((error) => {
             show.value = true;
-            console.error("登录失败");
-          }
-        })
-        .catch((error) => {
-          show.value = true;
-          console.error("登录时出现错误:", error);
-        });
+            console.error("登录时出现错误:", error);
+          });
     };
 
     return {
@@ -328,9 +328,9 @@ h7 {
   font-size: 3.5vw;
 }
 .van-button--block {
-    display: block;
-    height: 8vw;
-    width: 100%;
+  display: block;
+  height: 8vw;
+  width: 100%;
 }
 </style>
   

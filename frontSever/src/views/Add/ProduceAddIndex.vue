@@ -65,9 +65,9 @@
           clearable
         />
         <van-field
-          label="💰积分价格"
+          label="💰pp币价格"
           v-model="credit"
-          placeholder="请输入商品积分价格(整数)"
+          placeholder="请输入商品pp币价格(整数)"
           clearable
         />
         <van-field
@@ -311,7 +311,7 @@ export default {
       presetIndex.value = "无预设"; // 选择预设的值重置为0，使用.value
       title.value = ""; // 任务名称重置为空
       desc.value = ""; // 任务详情重置为空
-      credit.value = ""; // 积分价格重置为0
+      credit.value = ""; // pp币价格重置为0
       num.value = "";
       useName.value = "";
     };
@@ -329,7 +329,7 @@ export default {
       }
       const value = parseFloat(credit.value);
       if (!Number.isInteger(value)) {
-        message.value = "积分只能是整数哦，请重新输入！";
+        message.value = "pp币只能是整数哦，请重新输入！";
         show.value = true;
         isLoading.value = false;
         return;

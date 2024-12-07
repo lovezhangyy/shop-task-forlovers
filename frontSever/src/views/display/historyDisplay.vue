@@ -54,7 +54,7 @@
         <div
           style="z-index: 2; transform: translate(0px, -3vh); font-size: 2.8vh"
         >
-          <h14>💰积分总数：{{ data.dayCredit }}</h14>
+          <h14>💰pp币总数：{{ data.dayCredit }}</h14>
           <div
             style="
               z-index: 2;

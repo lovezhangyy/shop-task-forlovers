@@ -44,7 +44,7 @@
       </van-dialog>
 
       <div style="transform: translate(6px, 0px)">
-        <h1>💰 积分榜</h1>
+        <h1>💰 pp币榜</h1>
       </div>
       <div v-for="(item, index) in userList" :key="index">
         <div
@@ -65,7 +65,7 @@
             <van-card
               :price="formatNumber(item.credit)"
               currency="💰"
-              :title="`${item.name}积分`"
+              :title="`${item.name}pp币`"
               :desc="item.userText.substring(0, 10)"
               class="goods-card"
               :thumb="item.userImage"

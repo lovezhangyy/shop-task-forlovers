@@ -2,7 +2,7 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-    keyword: '小羊是帅哥',
+    keyword: '27',
   },
   mutations: {
     setKeyword(state, newKeyword) {
