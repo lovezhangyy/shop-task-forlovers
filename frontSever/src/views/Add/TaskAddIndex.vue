@@ -209,19 +209,13 @@ export default {
     };
     const columns = [
       { text: "无预设", value: "0" },
-      { text: "早睡早起", value: "1" },
+      { text: "不生气卡", value: "1" },
       { text: "打扫房间", value: "2" },
       { text: "健康运动", value: "3" },
-      { text: "上课不迟到", value: "4" },
-      { text: "做乖宝宝", value: "5" },
-      { text: "买小礼物", value: "6" },
-      { text: "好感分", value: "7" },
-      { text: "帮拿东西", value: "8" },
-      { text: "不喝饮料", value: "9" },
-      { text: "认真看课", value: "10" },
-      { text: "背单词", value: "11" },
-      { text: "吃蔬菜", value: "12" },
-      { text: "白天不睡觉", value: "13" },
+      { text: "做小手工", value: "4" },
+      { text: "为宝宝做一顿丰盛大餐吧", value: "5" },
+      { text: "外出探店", value: "6" },
+      { text: "随机买单一件购物车里的东西", value: "7" },
     ];
 
     const onConfirm = ({ selectedOptions }) => {
@@ -232,48 +226,27 @@ export default {
 
     const onPresetChange = (value) => {
       // 根据选择的预设值来自动填充其他信息
-      if (value === "早睡早起") {
+      if (value === "不生气卡") {
         title.value = value;
-        desc.value = "熬夜对身体很不好，还是要早点睡觉第二天才能有精神！";
+        desc.value = "我错了，潘潘大王！饶了我吧！~";
       } else if (value === "打扫房间") {
         title.value = value;
-        desc.value = "有一段时间没有打扫房间了，一屋不扫，何以扫天下？";
+        desc.value = "我们来一起打扫房间吧！给小鸡翅一个干净的环境！";
       } else if (value === "健康运动") {
         title.value = value;
-        desc.value = "做一些健身运动吧，跳绳，跑步，训练动作什么的。";
-      } else if (value === "上课不迟到") {
+        desc.value = "一起健身或者打球、散步，大家要健健康康~";
+      } else if (value === "做小手工") {
         title.value = value;
-        desc.value = "上课不迟到，才能更好的学习，加油！";
-      } else if (value === "做乖宝宝") {
+        desc.value = "想要一件手工小礼物，简单的就行~";
+      } else if (value === "为宝宝做一顿丰盛大餐吧") {
         title.value = value;
-        desc.value = "乖乖才能更好的维持双方感情，最喜欢乖乖的捏捏了！";
-      } else if (value === "买小礼物") {
+        desc.value = "想请大厨为我做一顿大餐";
+      } else if (value === "外出探店") {
         title.value = value;
-        desc.value = "买点小礼物，像泡泡马特什么的。";
-      } else if (value === "好感分") {
+        desc.value = "我们要一起吃很多很多顿饭，从这顿开始";
+      } else if (value === "随机买单一件购物车里的东西") {
         title.value = value;
-        desc.value = "今天表现很棒，好感加分！";
-      } else if (value === "帮拿东西") {
-        title.value = value;
-        desc.value =
-          "有了我，你再也不需要移动了。拿外卖，拿零食，开空调，开电视，在所不辞。";
-      } else if (value === "不喝饮料") {
-        title.value = value;
-        desc.value = "不喝饮料，减肥，拒绝糖分，喝多饮料对身体不好的！";
-      } else if (value === "认真看课") {
-        title.value = value;
-        desc.value = "认真看课，为未来的美好加油，奋斗，奥利给！";
-      } else if (value === "背单词") {
-        title.value = value;
-        desc.value = "背四六级考研单词，为了梦想，为了理想，为了生活，加油背！";
-      } else if (value === "吃蔬菜") {
-        title.value = value;
-        desc.value =
-          "吃蔬菜有利于身体健康，为身体补充维生素，这样身体才能更棒，身材才能更好！";
-      } else if (value === "白天不睡觉") {
-        title.value = value;
-        desc.value =
-          "白天不睡觉，晚上早睡，早上早起，养成良好生活作息从我做起！";
+        desc.value = "给你的宝宝买个小东西吧~";
       }
     };
 
